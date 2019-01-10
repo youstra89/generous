@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ ''|trans }}Informations sur la mosquee {{ mosquee.name }}{% endblock %}
+
+
+{% block notifications %}
+{% endblock %}
+
+
+{% block body %}
+  <div class="container">
+    <!-- Section: Magazine v.2 -->
+    <div class="row justify-content-center">
+      <h2 class="h1-responsive font-weight-bold text-center my-5">
+        {% trans with {'%name%': mosquee.name, '%localisation%': mosquee.localisation} from 'app' %}Informations sur le mosquée %name% à %localisation% {% endtrans %}
+      </h2>
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header">
+            {{ 'Don de'|trans }} <strong>{{ mosquee.user.firstname }} {{ mosquee.user.lastname }}</strong>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{ mosquee.name }}</strong> à <strong>{{ mosquee.localisation }}</strong></h5>
+            <p class="card-text">
+              {% if mosquee.description is empty %}
+                {{ 'Pas de description'|trans }}
+              {% else %}
+                {{ mosquee.description }}
+              {% endif %}
+              <hr>
+              <strong>{{ 'Date de début des travaux'|trans }}</strong>: {{ mosquee.beginingAt|date('d-m-Y') }}<br>
+              <strong>{{ 'Date de fin des travaux'|trans }}</strong>: {{ mosquee.endingAt|date('d-m-Y') }}<br>
+              <strong>{{ 'Date de livraison des travaux'|trans }}</strong>: {{ mosquee.deliveredAt|date('d-m-Y') }}<br>
+              <hr>
+              <strong>{{ 'Longueur'|trans }}</strong>: {{ mosquee.longueur }}m<br>
+              <strong>{{ 'Largeur'|trans }}</strong>: {{ mosquee.largeur }}m<br>
+              <strong>{{ 'Hauteur'|trans }}</strong>: {{ mosquee.hauteur }}m<br>
+              <hr>
+              <strong>{{ 'Coût de la construction'|trans }}</strong>:
+              {% if mosquee.cost == 0 %}
+                {{ 'Inconnu'|trans }}<br>
+              {% else %}
+                {{ mosquee.cost|number_format(0, ',', ' ') }} F CFA<br>
+              {% endif %}
+              <strong>{{ 'Bénéficiare'|trans }}</strong>: {{ mosquee.recipient }}<br>
+              <hr>
+            </p>
+            <!-- <a href="#!" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section: Magazine v.2 -->
+  </div>
+{% endblock %}
+
+
+{% block javascript %}
+  <script>
+    $(document).ready(function() {
+      $('.mdb-select').materialSelect();
+    });
+  </script>
+{% endblock %}

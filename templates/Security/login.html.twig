@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+  {{ 'Connexion'|trans }}
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+
+{% block slider %}
+{% endblock %}
+
+
+{% block body %}
+  <div class="container">
+    <h1 class="uk-heading-line uk-heading-primary uk-text-center"><span>{{ 'Connexion'|trans }}</span></h1>
+    <hr class="uk-divider-icon"><br>
+    {% if error %}
+      <div class="uk-margin-auto uk-margin-auto-vertical">
+        <div class="uk-alert-danger" uk-alert>
+          <a class="uk-alert-close" uk-close></a>
+          {{ error.messageKey }}
+        </div>
+      </div>
+    {% endif %}
+    {% block notifications %}
+      {% for message in app.flashes('success') %}
+        <div class="uk-container uk-padding-small">
+          <div class="uk-alert-success" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
+            <p>{{ message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      {% for message in app.flashes('warning') %}
+        <div class="uk-container uk-padding-small">
+          <div class="uk-alert-warning" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
+            <p>{{ message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      {% for message in app.flashes('error') %}
+        <div class="uk-container uk-padding-small">
+          <div class="uk-alert-danger" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
+            <p>{{ message }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endblock %}
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="card">
+      <h5 class="card-header default-color white-text text-center py-4">
+        <strong>{{ 'Connexion'|trans }}</strong>
+      </h5>
+      <!--Card content-->
+      <div class="card-body px-lg-5 pt-0">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" id="contact_form" method="post" action="{{ path('login') }}">
+          <!-- Email -->
+          <div class="md-form">
+            <label for="username">{{ 'Nom d\'utilisateur'|trans }}</label>
+            <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}">
+          </div>
+          <!-- Password -->
+          <div class="md-form">
+            <label for="password">{{ 'Mot de passe'|trans }}</label>
+            <input  type="password" id="password" class="form-control" name="_password">
+          </div>
+          <div class="d-flex justify-content-around">
+            <div>
+              <!-- Remember me -->
+            </div>
+            <div>
+              <!-- Forgot password -->
+              <a href="{{ path('resetting') }}">{{ 'Mot de passe oublié'|trans }}</a>
+            </div>
+          </div>
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+          <!-- Sign in button -->
+          <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">{{ 'Se connecter'|trans }}</button>
+          <!-- Register -->
+          <p>
+            <a href="{{ path('registration') }}">{{ 'Créer son compte'|trans }}</a>
+          </p>
+          <!-- Social login -->
+        </form>
+        <!-- Form -->
+      </div>
+    </div>
+    <!-- Material form login -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

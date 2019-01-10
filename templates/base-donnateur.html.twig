@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% set dir = 'ltr' %}
+{% if app.request.locale == 'ar' %}
+  {% set dir = 'rtl' %}
+{% endif %}
+<html lang="en" dir="{{ dir }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      {% block title %}{{ 'Accueil'|trans }}{% endblock %}
+    </title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark default-color">
+        <a class="navbar-brand" href="#"><strong></strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if current == 'accueil' %} active {% endif %}">
+              <a class="nav-link" href="{{ path('homepage.donnateur') }}">{{ 'Accueil'|trans }}<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item{% if current == 'puit' %} active {% endif %}">
+              <a class="nav-link" href="{{ path('user.puits') }}">{{ 'Puits'|trans }}</a>
+            </li>
+            <li class="nav-item{% if current == 'mosquee' %} active {% endif %}">
+              <a class="nav-link" href="{{ path('user.mosquees') }}">{{ 'Mosquées'|trans }}</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <div class="btn-group">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  Actions
+                </button>
+                <div class="dropdown-menu">
+                  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a class="dropdown-item" href="{{ path('logout') }}">{{ 'Déconnexion'|trans }}</a>
+                  {% endif %}
+                  <!-- <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a class="navbar-brand" href="#"><strong></strong></a>
+        </div>
+      </nav>
+    </header>
+    <!--Main Navigation-->
+    <div class="container">
+      {% block notifications %}
+      {% endblock %}
+    </div>
+    {% block body %}
+    <div class="container">
+      <!-- Section: Magazine v.2 -->
+      <section class="magazine-section my-5">
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold text-center my-5">{{ 'Bilan de mes dons'|trans }}</h2>
+        <!-- Section description -->
+        <p class="text-center dark-grey-text w-responsive mx-auto mb-5">
+          {{ 'Le rapport de tous mes projets de construction de mosquées et de puits'|trans }}
+        </p>
+      </section>
+      <!-- Section: Magazine v.2 -->
+    </div>
+    {% endblock %}
+    <!--/. Sidebar navigation -->
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <!-- MDB core JavaScript -->
+    <script src="{{ asset('js/mdb.min.js') }}"></script>
+    <script>
+      // SideNav Button Initialization
+      $(".button-collapse").sideNav();
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      Ps.initialize(sideNavScrollbar);
+    </script>
+    {% block javascript %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,84 @@
+{{ form_start(form, { 'attr': {'class': 'border border-light p-5',  'style': 'color: #757575;'} }) }}
+    <div class="row">
+      <div class="md-form">
+
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <!-- First name -->
+            <div class="md-form">
+                {{ form_row(form.name, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <div class="md-form">
+                {{ form_row(form.localisation, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.longueur, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.largeur, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.hauteur, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <div class="">
+                {{ form_row(form.begining_at, { 'attr': {'class' : ""} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="">
+                {{ form_row(form.ending_at, { 'attr': {'class' : ""} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="">
+                {{ form_row(form.delivered_at, { 'attr': {'class' : ""} }) }}
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.cost, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.recipient, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.imam_name, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+        <div class="col">
+            <div class="md-form">
+                {{ form_row(form.imam_phone_number, { 'attr': {'class' : "form-control mb-4"} }) }}
+            </div>
+        </div>
+    </div>
+    <div class="md-form mb-4 pink-textarea active-pink-textarea">
+      {{ form_row(form.description, { 'attr': {'class' : "md-textarea form-control"} }) }}
+    </div>
+      {{ form_row(form.user, { 'attr': {'class' : "browser-default custom-select"} }) }}
+      <button type="submit" class="btn btn-primary btn-md">Enregistrer</button>
+{{ form_end(form) }}

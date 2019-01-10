@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="ar" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="AyXEnfQ" resname="Informations sur le mosquée %name% à %localisation%">
+        <source>Informations sur le mosquée %name% à %localisation%</source>
+        <target>__Informations sur le mosquée %name% à %localisation%</target>
+      </trans-unit>
+      <trans-unit id="d3gP..G" resname="Informations sur le puit %name% à %localisation%">
+        <source>Informations sur le puit %name% à %localisation%</source>
+        <target>__Informations sur le puit %name% à %localisation%</target>
+      </trans-unit>
+      <trans-unit id="QIMOFMs" resname="Edition du mosquee %name% à %localisation%">
+        <source>Edition du mosquee %name% à %localisation%</source>
+        <target>__Edition du mosquee %name% à %localisation%</target>
+      </trans-unit>
+      <trans-unit id="3elYJCS" resname="Modification des informations du mosquee %name% à %localisation%">
+        <source>Modification des informations du mosquee %name% à %localisation%</source>
+        <target>__Modification des informations du mosquee %name% à %localisation%</target>
+      </trans-unit>
+      <trans-unit id="Mi5Pbt." resname="Edition du puit %name% à %localisation%">
+        <source>Edition du puit %name% à %localisation%</source>
+        <target>__Edition du puit %name% à %localisation%</target>
+      </trans-unit>
+      <trans-unit id="uqG1WI_" resname="Modification des informations du puit %name% à %localisation%">
+        <source>Modification des informations du puit %name% à %localisation%</source>
+        <target>__Modification des informations du puit %name% à %localisation%</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

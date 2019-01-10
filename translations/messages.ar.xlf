@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="ar" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>الاستقبال</target>
+      </trans-unit>
+      <trans-unit id="BTx2TEd" resname="Puits">
+        <source>Puits</source>
+        <target>__Puits</target>
+      </trans-unit>
+      <trans-unit id="9N8gmZ3" resname="Mosquées">
+        <source>Mosquées</source>
+        <target>__Mosquées</target>
+      </trans-unit>
+      <trans-unit id="_1_eksG" resname="Déconnexion">
+        <source>Déconnexion</source>
+        <target>__Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="9RRiiYM" resname="Bilan de mes dons">
+        <source>Bilan de mes dons</source>
+        <target>__Bilan de mes dons</target>
+      </trans-unit>
+      <trans-unit id="eD1Wel_" resname="Le rapport de tous mes projets de construction de mosquées et de puits">
+        <source>Le rapport de tous mes projets de construction de mosquées et de puits</source>
+        <target>__Le rapport de tous mes projets de construction de mosquées et de puits</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>__Actions</target>
+      </trans-unit>
+      <trans-unit id="_1rB2cv" resname="Bilan des dons">
+        <source>Bilan des dons</source>
+        <target>__Bilan des dons</target>
+      </trans-unit>
+      <trans-unit id="9HnJ.oP" resname="Le rapport de tous les projets de construction de mosquées et de puits">
+        <source>Le rapport de tous les projets de construction de mosquées et de puits</source>
+        <target>__Le rapport de tous les projets de construction de mosquées et de puits</target>
+      </trans-unit>
+      <trans-unit id="wxSFGoP" resname="Don de">
+        <source>Don de</source>
+        <target>__Don de</target>
+      </trans-unit>
+      <trans-unit id="0ZvHIs7" resname="Pas de description">
+        <source>Pas de description</source>
+        <target>__Pas de description</target>
+      </trans-unit>
+      <trans-unit id="Uonm8vy" resname="Date de début des travaux">
+        <source>Date de début des travaux</source>
+        <target>__Date de début des travaux</target>
+      </trans-unit>
+      <trans-unit id="sSVrjE3" resname="Date de fin des travaux">
+        <source>Date de fin des travaux</source>
+        <target>__Date de fin des travaux</target>
+      </trans-unit>
+      <trans-unit id="m7XI50J" resname="Date de livraison des travaux">
+        <source>Date de livraison des travaux</source>
+        <target>__Date de livraison des travaux</target>
+      </trans-unit>
+      <trans-unit id="6RJJPOU" resname="Longueur">
+        <source>Longueur</source>
+        <target>__Longueur</target>
+      </trans-unit>
+      <trans-unit id="7Ypc0tq" resname="Largeur">
+        <source>Largeur</source>
+        <target>__Largeur</target>
+      </trans-unit>
+      <trans-unit id="7gw9nbV" resname="Hauteur">
+        <source>Hauteur</source>
+        <target>__Hauteur</target>
+      </trans-unit>
+      <trans-unit id="Riu2Otc" resname="Coût de la construction">
+        <source>Coût de la construction</source>
+        <target>__Coût de la construction</target>
+      </trans-unit>
+      <trans-unit id="O5hqVb_" resname="Inconnu">
+        <source>Inconnu</source>
+        <target>__Inconnu</target>
+      </trans-unit>
+      <trans-unit id="9N1RH1U" resname="Bénéficiare">
+        <source>Bénéficiare</source>
+        <target>__Bénéficiare</target>
+      </trans-unit>
+      <trans-unit id="0VHRSz1" resname="Toutes les mosquées">
+        <source>Toutes les mosquées</source>
+        <target>__Toutes les mosquées</target>
+      </trans-unit>
+      <trans-unit id="Q9Yd6XA" resname="Liste de toutes mes mosquées enregistrées">
+        <source>Liste de toutes mes mosquées enregistrées</source>
+        <target>__Liste de toutes mes mosquées enregistrées</target>
+      </trans-unit>
+      <trans-unit id="Q_9f71G" resname="Donnateur">
+        <source>Donnateur</source>
+        <target>__Donnateur</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>__Nom</target>
+      </trans-unit>
+      <trans-unit id="8x9PyFE" resname="Localisation">
+        <source>Localisation</source>
+        <target>__Localisation</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>__Description</target>
+      </trans-unit>
+      <trans-unit id="1Vs6IZG" resname="Profondeur">
+        <source>Profondeur</source>
+        <target>__Profondeur</target>
+      </trans-unit>
+      <trans-unit id="PKUV1Ou" resname="Liste de tous mes puits enregistrés">
+        <source>Liste de tous mes puits enregistrés</source>
+        <target>__Liste de tous mes puits enregistrés</target>
+      </trans-unit>
+      <trans-unit id="APnFM0V" resname="Ajouter">
+        <source>Ajouter</source>
+        <target>__Ajouter</target>
+      </trans-unit>
+      <trans-unit id="oQSLujO" resname="Liste de toutes les mosquées enregistrées">
+        <source>Liste de toutes les mosquées enregistrées</source>
+        <target>__Liste de toutes les mosquées enregistrées</target>
+      </trans-unit>
+      <trans-unit id="cz0cdCZ" resname="Rechercher">
+        <source>Rechercher</source>
+        <target>__Rechercher</target>
+      </trans-unit>
+      <trans-unit id="JKlNiIe" resname="Ajout d'une mosquée">
+        <source>Ajout d'une mosquée</source>
+        <target>__Ajout d'une mosquée</target>
+      </trans-unit>
+      <trans-unit id="lWJT5wh" resname="Enregistrement d'une mosquée">
+        <source>Enregistrement d'une mosquée</source>
+        <target>__Enregistrement d'une mosquée</target>
+      </trans-unit>
+      <trans-unit id="47DEQpj" resname="">
+        <source></source>
+        <target>__</target>
+      </trans-unit>
+      <trans-unit id="5f_k1qW" resname="Tous les puits">
+        <source>Tous les puits</source>
+        <target>__Tous les puits</target>
+      </trans-unit>
+      <trans-unit id="ckfBIpo" resname="Liste de tous les puits enregistrés">
+        <source>Liste de tous les puits enregistrés</source>
+        <target>__Liste de tous les puits enregistrés</target>
+      </trans-unit>
+      <trans-unit id="ODumEzh" resname="Ajout d'un puit">
+        <source>Ajout d'un puit</source>
+        <target>__Ajout d'un puit</target>
+      </trans-unit>
+      <trans-unit id="wkciWHm" resname="Enregistrement d'un puit">
+        <source>Enregistrement d'un puit</source>
+        <target>__Enregistrement d'un puit</target>
+      </trans-unit>
+      <trans-unit id="I2TKS.V" resname="Confirmatioin activation compte  Orientation Authentique">
+        <source>Confirmatioin activation compte  Orientation Authentique</source>
+        <target>__Confirmatioin activation compte  Orientation Authentique</target>
+      </trans-unit>
+      <trans-unit id="MGC4ClW" resname="Activation de compte">
+        <source>Activation de compte</source>
+        <target>__Activation de compte</target>
+      </trans-unit>
+      <trans-unit id="lPdx9kD" resname="As salaamu alaykoum wa rahmatoullahi wa barakaatouh">
+        <source>As salaamu alaykoum wa rahmatoullahi wa barakaatouh</source>
+        <target>__As salaamu alaykoum wa rahmatoullahi wa barakaatouh</target>
+      </trans-unit>
+      <trans-unit id="A4FF4d0" resname="Votre compte est désormais actif.">
+        <source>Votre compte est désormais actif.</source>
+        <target>__Votre compte est désormais actif.</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>__Connexion</target>
+      </trans-unit>
+      <trans-unit id="hRdkX4h" resname="Nom d'utilisateur">
+        <source>Nom d'utilisateur</source>
+        <target>__Nom d'utilisateur</target>
+      </trans-unit>
+      <trans-unit id=".5yLjAZ" resname="Mot de passe">
+        <source>Mot de passe</source>
+        <target>__Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="RULWH19" resname="Mot de passe oublié">
+        <source>Mot de passe oublié</source>
+        <target>__Mot de passe oublié</target>
+      </trans-unit>
+      <trans-unit id="CsPSyzA" resname="Se connecter">
+        <source>Se connecter</source>
+        <target>__Se connecter</target>
+      </trans-unit>
+      <trans-unit id="Tm3Fi71" resname="Créer son compte">
+        <source>Créer son compte</source>
+        <target>__Créer son compte</target>
+      </trans-unit>
+      <trans-unit id="z7GsDIB" resname="Inscription">
+        <source>Inscription</source>
+        <target>__Inscription</target>
+      </trans-unit>
+      <trans-unit id="pVg_oHp" resname="Votre formulaire n'est pas valide">
+        <source>Votre formulaire n'est pas valide</source>
+        <target>__Votre formulaire n'est pas valide</target>
+      </trans-unit>
+      <trans-unit id="PCX0_17" resname="S'inscrire">
+        <source>S'inscrire</source>
+        <target>__S'inscrire</target>
+      </trans-unit>
+      <trans-unit id="dIieRtt" resname="En attente de réinitialisation de mot de passe compte Orientation Authentique">
+        <source>En attente de réinitialisation de mot de passe compte Orientation Authentique</source>
+        <target>__En attente de réinitialisation de mot de passe compte Orientation Authentique</target>
+      </trans-unit>
+      <trans-unit id="LpkJGx4" resname="Réinitialiser le mot de passe">
+        <source>Réinitialiser le mot de passe</source>
+        <target>__Réinitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="TUtJzvp" resname="Réinitialisation de compte">
+        <source>Réinitialisation de compte</source>
+        <target>__Réinitialisation de compte</target>
+      </trans-unit>
+      <trans-unit id="aJ4xphR" resname="Votre demande de réinitialisation a été prise en compte.">
+        <source>Votre demande de réinitialisation a été prise en compte.</source>
+        <target>__Votre demande de réinitialisation a été prise en compte.</target>
+      </trans-unit>
+      <trans-unit id="Xk0Rp_N" resname="Réinitialisation de mot de passe compte Orientation Authentique">
+        <source>Réinitialisation de mot de passe compte Orientation Authentique</source>
+        <target>__Réinitialisation de mot de passe compte Orientation Authentique</target>
+      </trans-unit>
+      <trans-unit id="OQBZh_N" resname="Réinitialisation de mot de passe">
+        <source>Réinitialisation de mot de passe</source>
+        <target>__Réinitialisation de mot de passe</target>
+      </trans-unit>
+      <trans-unit id="_faThWl" resname="Réinitialiser mot de passe">
+        <source>Réinitialiser mot de passe</source>
+        <target>__Réinitialiser mot de passe</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

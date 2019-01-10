@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+  {{ 'Inscription'|trans }}
+{% endblock %}
+
+
+{% block notifications %}
+  {% for message in app.flashes('success') %}
+    <div class="alert alert-success" role="alert">
+      <div class="uk-alert-success" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  {% for message in app.flashes('warning') %}
+    <div class="alert alert-warning" role="alert">
+      <div class="uk-alert-warning" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  {% for message in app.flashes('error') %}
+    <div class="alert alert-danger" role="alert">
+      <div class="uk-alert-danger" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+
+
+{% block body %}
+  <div class="container">
+    <h1 class="uk-heading-line uk-heading-primary uk-text-center"><span>{{ 'Inscription'|trans }}</span></h1>
+    {% if not form.vars.valid %}
+      <div class="uk-alert-danger" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ 'Votre formulaire n\'est pas valide'|trans }}</p>
+      </div>
+    {% endif %}
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card">
+            <h5 class="card-header default-color white-text text-center py-4">
+                <strong>{{ 'Inscription'|trans }}</strong>
+            </h5>
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;" method="post" action="{{ path('registration') }}">
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                {{ form_row(form.lastname, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                {{ form_row(form.firstname, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                {{ form_row(form.origin, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                {{ form_row(form.phone_number, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                {{ form_row(form.email, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                {{ form_row(form.username, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                {{ form_row(form.password.first, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                {{ form_row(form.password.second, { 'attr': {'class': 'form-control'} }) }}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Newsletter -->
+                    <div class="form-check">
+                    </div>
+                    <hr>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('registration') }}"/>
+                    <!-- Sign up button -->
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">{{ 'S\'inscrire'|trans }}</button>
+                </form>
+                <!-- Form -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

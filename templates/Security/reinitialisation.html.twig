@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+  {{ 'En attente de réinitialisation de mot de passe compte Orientation Authentique'|trans }}
+{% endblock %}
+
+
+{% block notifications %}
+  {% for message in app.flashes('success') %}
+    <div class="alert alert-success" role="alert">
+      <div class="uk-alert-success" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  {% for message in app.flashes('warning') %}
+    <div class="alert alert-warning" role="alert">
+      <div class="uk-alert-warning" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  {% for message in app.flashes('error') %}
+    <div class="alert alert-danger" role="alert">
+      <div class="uk-alert-danger" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+
+{% block body %}
+  <div class="uk-container">
+    <h1 class="uk-heading-line uk-heading-primary uk-text-center"><span>{{ 'Réinitialisation de compte'|trans }}</span></h1>
+    <hr class="uk-divider-icon"><br>
+    <div class="uk-margin-auto uk-margin-auto-vertical uk-width-1-2@s uk-card uk-card-default uk-card-body">
+      <div class="uk-text-center">
+        <p>{{ 'As salaamu alaykoum wa rahmatoullahi wa barakaatouh'|trans }}<strong> {{ user.username }}</strong>.</p><br>
+        <p>{{ 'Votre demande de réinitialisation a été prise en compte.'|trans }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

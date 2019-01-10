@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+  {% trans with {'%name%': mosquee.name, '%localisation%': mosquee.localisation} from 'app' %}Edition du mosquee %name% à %localisation% {% endtrans %}
+{% endblock %}
+
+
+{% block notifications %}
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+  <!-- Section: Magazine v.2 -->
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <section class="magazine-section my-5">
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold text-center my-2">
+          {% trans with {'%name%': mosquee.name, '%localisation%': mosquee.localisation} from 'app' %}Modification des informations du mosquee %name% à %localisation% {% endtrans %}
+        </h2>
+        <!-- Section description -->
+        <p class="text-center dark-grey-text w-responsive mx-auto">
+          {% include('Mosquee/_mosquee.html.twig') %}
+        </p>
+      </section>
+    </div>
+  </div>
+  <!-- Section: Magazine v.2 -->
+</div>
+{% endblock %}
+
+
+{% block javascript %}
+  <script>
+    $(document).ready(function() {
+      $('.mdb-select').materialSelect();
+    });
+  </script>
+{% endblock %}

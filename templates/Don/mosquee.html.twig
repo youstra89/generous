@@ -1,0 +1,63 @@
+{% extends 'base-donnateur.html.twig' %}
+
+
+{% block title %}
+  {{ 'Toutes les mosquées'|trans }}
+{% endblock %}
+
+
+{% block notifications %}
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+  <!-- Section: Magazine v.2 -->
+  <section class="magazine-section my-5">
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">{{ 'Liste de toutes mes mosquées enregistrées'|trans }}</h2>
+    <!-- Section description -->
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th><strong>#</strong></th>
+            <th><strong>{{ 'Donnateur'|trans }}</strong></th>
+            <th><strong>{{ 'Nom'|trans }}</strong></th>
+            <th><strong>{{ 'Localisation'|trans }}</strong></th>
+            <th><strong>{{ 'Description'|trans }}</strong></th>
+            <th><strong>{{ 'Actions'|trans }}</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% set i = 0 %}
+          {% for mosquee in mosquees %}
+            {% set i = i + 1 %}
+            <!-- Card -->
+            <tr>
+              <td>{{ i }}</td>
+              <td>{{ mosquee.user.firstname }} {{ mosquee.user.lastname }}</td>
+              <td>{{ mosquee.name }}</td>
+              <td>{{ mosquee.localisation }}</td>
+              <td>
+                {% if mosquee.description|length > 50 %}
+                    {{ mosquee.description|slice(0, 50) ~ '...' }}
+                  {% else %}
+                    {{ mosquee.description }}
+                  {% endif %}
+              </td>
+              <td>
+                <a href="{{ path('informations.user.mosquee', {id: mosquee.id}) }}" data-toggle="tooltip" title="Voir les détails">
+                  <i class="fas fa-info-circle mdb-gallery-view-icon"></i>
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="navigation">
+          {{ knp_pagination_render(mosquees) }}
+      </div>
+  </section>
+  <!-- Section: Magazine v.2 -->
+</div>
+{% endblock %}

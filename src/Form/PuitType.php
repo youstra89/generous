@@ -23,10 +23,8 @@ class PuitType extends AbstractType
             ->add('cost',         TextType::class,     ['label' => 'Coût de la construction', 'required' => false])
             ->add('description',  TextareaType::class, ['label' => 'Description', 'required' => false])
             ->add('depth',        TextType::class,     ['label' => 'Profondeur', 'required' => false])
+            ->add('date',         TextType::class,     ['label' => 'Date de construction', 'required' => false])
             ->add('recipient',    TextType::class, ['label' => 'Bénéficiaire', 'required' => true])
-            ->add('begining_at',  BirthdayType::class, ['label' => 'Début des travaux', 'required' => false])
-            ->add('ending_at',    BirthdayType::class, ['label' => 'Fin des travaux', 'required' => false])
-            ->add('delivered_at', BirthdayType::class, ['label' => 'Date de livraison', 'required' => false])
             ->add('user', EntityType::class, [
               'required' => false,
               'label' => 'Donnateur',

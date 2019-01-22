@@ -29,9 +29,7 @@
                 {{ puit.description }}
               {% endif %}
               <hr>
-              <strong>{{ 'Date de début des travaux'|trans }}</strong>: {{ puit.beginingAt|date('d-m-Y') }}<br>
-              <strong>{{ 'Date de fin des travaux'|trans }}</strong>: {{ puit.endingAt|date('d-m-Y') }}<br>
-              <strong>{{ 'Date de livraison des travaux'|trans }}</strong>: {{ puit.deliveredAt|date('d-m-Y') }}<br>
+              <strong>{{ 'Construit en '|trans }}</strong>: {{ puit.date }}<br>
               <hr>
               <strong>{{ 'Profondeur'|trans }}</strong>: {{ puit.depth }}m<br>
               <hr>

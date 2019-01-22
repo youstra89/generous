@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PuitRepository")
+ * @ApiResource
  */
 class Puit
 {
@@ -48,19 +50,9 @@ class Puit
     private $recipient;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $begining_at;
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $ending_at;
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $delivered_at;
+    private $date;
 
     /**
      * @ORM\Column(type="datetime")
@@ -160,38 +152,14 @@ class Puit
         return $this;
     }
 
-    public function getBeginingAt(): ?\DateTimeInterface
+    public function getDate(): ?string
     {
-        return $this->begining_at;
+        return $this->date;
     }
 
-    public function setBeginingAt(?\DateTimeInterface $begining_at): self
+    public function setDate(?string $date): self
     {
-        $this->begining_at = $begining_at;
-
-        return $this;
-    }
-
-    public function getEndingAt(): ?\DateTimeInterface
-    {
-        return $this->ending_at;
-    }
-
-    public function setEndingAt(?\DateTimeInterface $ending_at): self
-    {
-        $this->ending_at = $ending_at;
-
-        return $this;
-    }
-
-    public function getDeliveredAt(): ?\DateTimeInterface
-    {
-        return $this->delivered_at;
-    }
-
-    public function setDeliveredAt(?\DateTimeInterface $delivered_at): self
-    {
-        $this->delivered_at = $delivered_at;
+        $this->date = $date;
 
         return $this;
     }

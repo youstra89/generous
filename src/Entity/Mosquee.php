@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MosqueeRepository")
+ * @ApiResource
  */
 class Mosquee
 {
@@ -55,27 +57,12 @@ class Mosquee
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $hauteur;
+    private $date;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $recipient;
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $begining_at;
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $ending_at;
-
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $delivered_at;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -192,14 +179,14 @@ class Mosquee
         return $this;
     }
 
-    public function getHauteur(): ?string
+    public function getDate(): ?string
     {
-        return $this->hauteur;
+        return $this->date;
     }
 
-    public function setHauteur(?string $hauteur): self
+    public function setDate(?string $date): self
     {
-        $this->hauteur = $hauteur;
+        $this->date = $date;
 
         return $this;
     }
@@ -212,42 +199,6 @@ class Mosquee
     public function setRecipient(string $recipient): self
     {
         $this->recipient = $recipient;
-
-        return $this;
-    }
-
-    public function getBeginingAt(): ?\DateTimeInterface
-    {
-        return $this->begining_at;
-    }
-
-    public function setBeginingAt(?\DateTimeInterface $begining_at): self
-    {
-        $this->begining_at = $begining_at;
-
-        return $this;
-    }
-
-    public function getEndingAt(): ?\DateTimeInterface
-    {
-        return $this->ending_at;
-    }
-
-    public function setEndingAt(?\DateTimeInterface $ending_at): self
-    {
-        $this->ending_at = $ending_at;
-
-        return $this;
-    }
-
-    public function getDeliveredAt(): ?\DateTimeInterface
-    {
-        return $this->delivered_at;
-    }
-
-    public function setDeliveredAt(?\DateTimeInterface $delivered_at): self
-    {
-        $this->delivered_at = $delivered_at;
 
         return $this;
     }

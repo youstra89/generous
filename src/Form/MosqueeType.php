@@ -24,11 +24,8 @@ class MosqueeType extends AbstractType
             ->add('description',  TextareaType::class, ['label' => 'Description', 'required' => false])
             ->add('longueur')
             ->add('largeur')
-            ->add('hauteur')
             ->add('recipient',    TextType::class, ['label' => 'Bénéficiaire', 'required' => true])
-            ->add('begining_at',  BirthdayType::class, ['label' => 'Début des travaux', 'required' => false])
-            ->add('ending_at',    BirthdayType::class, ['label' => 'Fin des travaux', 'required' => false])
-            ->add('delivered_at', BirthdayType::class, ['label' => 'Date de livraison', 'required' => false])
+            ->add('date',         TextType::class, ['label' => 'Date de construction', 'required' => true])
             ->add('imam_name',         TextType::class, ['label' => 'Nom de l\'imam', 'required' => true])
             ->add('imam_phone_number', TextType::class, ['label' => 'Numéro de l\'imam', 'required' => true])
             ->add('user', EntityType::class, [

@@ -29,13 +29,10 @@
                 {{ mosquee.description }}
               {% endif %}
               <hr>
-              <strong>{{ 'Date de début des travaux'|trans }}</strong>: {{ mosquee.beginingAt|date('d-m-Y') }}<br>
-              <strong>{{ 'Date de fin des travaux'|trans }}</strong>: {{ mosquee.endingAt|date('d-m-Y') }}<br>
-              <strong>{{ 'Date de livraison des travaux'|trans }}</strong>: {{ mosquee.deliveredAt|date('d-m-Y') }}<br>
-              <hr>
               <strong>{{ 'Longueur'|trans }}</strong>: {{ mosquee.longueur }}m<br>
               <strong>{{ 'Largeur'|trans }}</strong>: {{ mosquee.largeur }}m<br>
-              <strong>{{ 'Hauteur'|trans }}</strong>: {{ mosquee.hauteur }}m<br>
+              <hr>
+              <strong>{{ 'Construite en '|trans }}</strong>: {{ mosquee.date }}<br>
               <hr>
               <strong>{{ 'Coût de la construction'|trans }}</strong>:
               {% if mosquee.cost == 0 %}

@@ -41,6 +41,12 @@
             <li class="nav-item{% if current == 'mosquee' %} active {% endif %}">
               <a class="nav-link" href="{{ path('mosquees') }}">{{ 'Mosquées'|trans }}</a>
             </li>
+            <li class="nav-item{% if current == 'classes' %} active {% endif %}">
+              <a class="nav-link" href="{{ path('user.mosquees') }}">{{ 'Classes'|trans }}</a>
+            </li>
+            <li class="nav-item{% if current == 'divers' %} active {% endif %}">
+              <a class="nav-link" href="{{ path('user.mosquees') }}">{{ 'Divers'|trans }}</a>
+            </li>
           </ul>
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
